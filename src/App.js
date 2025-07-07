@@ -7,10 +7,15 @@ function App() {
   const [appliedList, setAppliedList] = useState([false, false, false]);
   const [showFinale, setShowFinale] = useState(false);
 
-  const messages = [
-    "Welcome Candidate",
-    "Hey Mahammad! Super opportunity!",
-    "Internship, Just need basic HTML, CSS!"
+  // const messages = [
+  //   "Welcome Candidate",
+  //   "Hey Mahammad! Super opportunity!",
+  //   "Internship, Just need basic HTML, CSS!"
+  // ];
+  const hrData = [
+    { name: "HR Aleksandra", message: "We just need someone who can open VS Code." },
+    { name: "HR Ola", message: "Can you add margin with CSS? You’re in!" },
+    { name: "HR Anna", message: "Just basic HTML is fine, like... do you know what a div is?" }
   ];
 
   useEffect(() => {
@@ -31,10 +36,11 @@ function App() {
   return (
     <div className="relative min-h-screen flex justify-center items-center bg-gray-100">
       <div className="flex gap-6 flex-wrap justify-center">
-        {!showFinale && messages.map((msg, i) => (
+        {!showFinale && hrData.map((hr, i) => (
           <HRCard
             key={i}
-            initialMessage={msg}
+            name = {hr.name}
+            initialMessage={hr.message}
             onApply={() => handleApply(i)}
           />
         ))}

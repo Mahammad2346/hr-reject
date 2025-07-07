@@ -3,7 +3,7 @@ import './index.css';
 import hrPhoto from './images/hr-1.jpg';
 import { motion, positionalKeys } from 'framer-motion';
 
-function HRCard({ initialMessage, onApply }) {
+function HRCard({ initialMessage, onApply, name }) {
     const [hovering, setHovering] = useState(false);
     const [hoverMessageIndex, setHoverMessageIndex] = useState(0);
 
@@ -78,7 +78,7 @@ function HRCard({ initialMessage, onApply }) {
                 <img className='object-cover w-16 h-16 rounded-full' src={hrPhoto} alt="HR" />
             </div>
             <div className='w-2/3 flex flex-col justify-between p-3'>
-                <div className='text-lg font-bold text-gray-800'>Aleksandra Bobr</div>
+                <div className='text-lg font-bold text-gray-800'>{name}</div>
                 <motion.div
                     key={message}
                     initial={{ opacity: 0 }}
