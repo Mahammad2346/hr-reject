@@ -11,7 +11,6 @@ function HRCard({ initialMessage, onApply, name }) {
         "Unfortunately, you were not selected.",
         "Your profile wasn't a match.",
         "Bóbr language skills were necessary for this position. Regrettably, you don't meet this requirement.",
-        "You don't speak Bóbr, which is required for this role.",
         "We're moving forward with other candidates."
 
     ]
